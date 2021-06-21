@@ -4,7 +4,7 @@
 int main(int argc, char const *argv[])
 {
     srand(time(NULL));
-    std::cout << "Ra!" << std::endl;
+    std::cout << "Raaaaa!" << std::endl;
 
     //Incializar
     std::vector<int> array = {6, 5, 1, 2, 4, 3, 0, 7};
