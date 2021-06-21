@@ -105,13 +105,15 @@ void Genetic::iniciar()
 {
   print_pop();
   selection();
-  reproduction();
-  print_pop();
-  selection();
   print_pop();
   reproduction();
   print_pop();
   selection();
+  print_pop();
+  reproduction();
+  print_pop();
+  selection();
+  print_pop();
   population[population.size() - 1].mutar(2);
 }
 
