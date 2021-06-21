@@ -17,11 +17,8 @@ private:
 
 public:
   Genetic(std::vector<int> &, float, int, int);
-  std::vector<Individual> sorted();
   std::vector<Individual> selection();
   std::vector<Individual> reproduction();
-  std::vector<Individual> mutation();
-  std::vector<int> cruzar(std::vector<int> &, std::vector<int> &, std::vector<int> &);
   std::vector<int> vec_menor(std::vector<int> &, std::vector<int> &);
   int random_pos(int);
   int key_bett();

@@ -14,9 +14,9 @@ Genetic::Genetic(std::vector<int> &_arr, float mt_ch, int nm_ind, int ct_cr)
   cant_cruce = ct_cr;
 }
 
-std::vector<Individual> Genetic::sorted()
+std::vector<Individual> Genetic::selection()
 {
-  puts("Sorting");
+  puts("Seleccionado");
   std::sort(population.begin(), population.end());
   return population;
 }
@@ -104,15 +104,14 @@ void Genetic::print_pop()
 void Genetic::iniciar()
 {
   print_pop();
-  sorted();
+  selection();
   reproduction();
   print_pop();
-  sorted();
-  print_pop();
+  selection();
   print_pop();
   reproduction();
   print_pop();
-  sorted();
+  selection();
   population[population.size() - 1].mutar(2);
 }
 
