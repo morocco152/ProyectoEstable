@@ -19,12 +19,11 @@ bool Individual::operator<(Individual &_a) const
   return (fit_ < _a.fit_);
 }
 
-void Individual::set_array(std::vector<int> & _new_a)
+void Individual::set_array(std::vector<int> &_new_a)
 {
-    array = _new_a;
-    fitness();
+  array = _new_a;
+  fitness();
 }
-
 
 int Individual::get_len()
 {
@@ -77,13 +76,14 @@ void Individual::print()
 /// Bust_ imple
 void Individual::mutar(int genes)
 {
-  std::cout << "Mutando" << "\n";
-    int mejora = get_fitness() + genes;
-    while (get_fitness() <= mejora)
-    {
-        l_suffle();
-        print();
-    }
+  std::cout << "Mutando"
+            << "\n";
+  int mejora = get_fitness() + genes;
+  while (get_fitness() <= mejora)
+  {
+    l_suffle();
+    print();
+  }
 }
 
 void Individual::l_suffle()

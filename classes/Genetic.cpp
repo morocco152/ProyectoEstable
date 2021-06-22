@@ -103,19 +103,19 @@ void Genetic::print_pop()
 
 void Genetic::iniciar()
 {
-  print_pop();
+  for (auto i = 0; i < 3; i++)
+  {
+    print_pop();
+    selection();
+    print_pop();
+    reproduction();
+  }
+
   selection();
-  print_pop();
-  reproduction();
-  print_pop();
-  selection();
-  print_pop();
-  reproduction();
-  print_pop();
-  selection();
-  print_pop();
   population[population.size() - 1].mutar(2);
 }
+
+//random fx
 
 template <typename T>
 void printvec(std::vector<T> &_a)
